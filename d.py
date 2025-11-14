@@ -45,7 +45,7 @@ class DataProcessor:
                 self.main_df = pd.read_csv(
                     file_path,
                     low_memory=False,
-                    usecols=['MON', 'Product Titles', 'Product Prices', 'Seller', 'Platform']
+                    # usecols=['MON', 'Product Titles', 'Product Prices', 'Seller', 'Platform']
                 )
 
                 # Convert prices
@@ -64,13 +64,13 @@ class DataProcessor:
 
             else:
                 st.warning("📁 Creating sample data...")
-                self.main_df = self.create_sample_data()
+                # self.main_df = self.create_sample_data()
 
             self._build_product_index()
 
         except Exception as e:
             st.error(f"❌ Error loading data: {e}")
-            self.main_df = self.create_sample_data()
+            # self.main_df = self.create_sample_data()
             self._build_product_index()
 
     def _build_product_index(self):
