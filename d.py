@@ -536,7 +536,7 @@ def main():
     # Initialize data processor
     if 'data_processor' not in st.session_state:
         with st.spinner("Loading data..."):
-            # data_processor = DataProcessor(r"C:\Users\Snapp Pay\Downloads\mon price bf 19k - Final 14 Nov - Edited.csv")
+            # data_processor = DataProcessor(r"mont.csv")
             data_processor = DataProcessor()  # Using sample data for deployment
             st.session_state.data_processor = data_processor
     else:
